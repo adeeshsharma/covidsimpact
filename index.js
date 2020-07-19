@@ -11,12 +11,12 @@ require('./prod')(app);
 
 app.use(express.static(__dirname+'/public'));
 
-/*(app.use((req,res,next) =>{
+app.use((req,res,next) =>{
     res.statusCode = 404;
     res.setHeader('Content-Type', 'text/html');
     res.end('<html><body><h1>Error 404: NOT FOUND!</h1></body></html>');
 });
-*/
+
 }
 catch(err){
     console.log(err.message);
