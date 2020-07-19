@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        />
+        <title> STATISTICS</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        
+        <meta property="og:site_name" content="covidsimpact.com" />
+        <meta property="og:title" content="COVIDS IMPACT" />
+        <meta property="og:description" content="GLOBAL STATISTICS OF COVID-19" />
+        <meta name="description" content="GLOBAL STATISTICS OF COVID-19" />
+        <meta
+          property="og:image"
+          content="https://www.covidsimpact.com/assets/img/thumbnail.png"
+          alt="thumbnail"
+        />
+        <meta property="og:url" content="http://www.covidsimpact.com/stats.html" />
+        <meta property="og:type" content="blog" />
+
+        <link rel='shortcut icon' href='assets/img/favicon.ico' type='image/x-icon' />
+
+        
+        <!--- nav icons-->
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css"
+        />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/css/Aboutuscss.css" />
+        <!--    animations-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        
+
+        <script src="canvasJS/canvasjs.min.js"></script> 
+
+
+    </head>
+    <body style="background-color: #141414;" onload="AOS.init();tableFunc()">
+        <nav
+            class="navbar navbar-dark navbar-expand-md sticky-top"
+            style="background-color: #181818; font-family: 'Montserrat', sans-serif;"
+        >
+            <div class="container-fluid">
+
+                 <a href="index.html"> <img src="assets/img/logon.svg" alt="logo" height="45" width="45"></a>
+        
+                <a
+                    class="navbar-brand"
+                    href="index.html"
+                    style="color: rgb(169,169,169);"
+                    ><b>&nbsp;COVID-19 |&nbsp;<font color="#66cc66">STATS</font></b></a
+                ><button
+                    data-toggle="collapse"
+                    class="navbar-toggler"
+                    data-target="#navcol-1"
+                >
+                    <span class="sr-only">Toggle navigation</span
+                    ><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-left" id="navcol-1">
+                    
+                   <p id="updatetime" style="color:#6C757D"></p>
+                     
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                style="color: rgb(169,169,169);"
+                                href="index.html"
+                                ><i class="fa fa-fw fa-globe-americas"></i>WORLD</a
+                            >
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link active"
+                                href="stats.html"
+                                style="color: rgb(169,169,169);"
+                                ><i class="fa fa-fw fa-list-alt"></i>&nbsp;STATS</a
+                            >
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                href="news.html"
+                                style="color: rgb(169,169,169);"
+                                ><i class="fa fa-fw fa-newspaper"></i>&nbsp;NEWS</a
+                            >
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                href="Precautions.html"
+                                style="color: rgb(169,169,169);"
+                                ><i class="fa fa-fw fa-heartbeat"></i>CARE</a
+                            >
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                href="Helpline.html"
+                                style="color: rgb(169,169,169);"
+                                ><i class="fa fa-fw fa-user-md"></i>HELP</a
+                            >
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                href="Aboutus.html"
+                                style="color: rgb(169,169,169);"
+                                ><i class="fa fa-fw fa-address-card"></i>&nbsp;ABOUT</a
+                            >
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link display"
+                                href="apidoc.html"
+                                title="Use our API and Extension"
+                                rel="noreferrer"
+                                style="color: #66cc66;"
+                                ><i class="fa fa-fw fa-link"></i></a
+                            >
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <!---<script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>-->
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          //  AOS.init();
+        </script>
+
+        <section>
+            <div class="container">
+                <div
+                    class="card"
+                    style="background-color: #141414; color: antiquewhite; text-align: justify"
+                >
+                    <div class="card-body">
+                        <h2
+                            class="card-title"
+                            style= "color: #A1A1A1; text-align:center; font-family: 'Montserrat', sans-serif;"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        ><b>
+                            STATISTICS</b>
+                        </h2>
+                        <br>
+                        <p class="card-text">
+                            The first case of coronavirus disease was identified
+                            in December 2019 in Wuhan, the capital of China's
+                            Hubei province, and since then it has spread globally, resulting
+                            in the ongoing 2019-20 coronavirus pandemic.
+                        </p>
+                        <br>
+                        
+                        <h3
+                            class="card-title"
+                            style="color: #A1A1A1; font-family: 'Montserrat', sans-serif;"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        >
+                            DEATH TOLL
+                        </h3>
+                        
+                        <br />
+                        <center><div id="BarChart" style="height: 500px; width: 100%; border:7px solid #2A2A2A; border-radius:25px;" data-aos="zoom-in" data-aos-duration="800"></div></center>
+                        <br>
+                        <br>
+                        <br>
+                        <center><div id="AreaChart" style="height: 500px; width: 100%;border:7px solid #2A2A2A; border-radius:25px;" data-aos="zoom-in" data-aos-duration="800"></div></center>
+                        <br>
+                        <br>
+                   
+                        <p class="card-text"></p>
+                        <p class="card-text"></p>
+                        
+                        
+                        <h3
+                            class="card-title"
+                            style="color: #A1A1A1; font-family: 'Montserrat', sans-serif;"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        >
+                            GLOBAL CONDITION
+                        </h3>
+                    </div>
+                </div>
+                
+                <table
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    class="table"
+                    style="width: inherit; padding-top: 10px; background-color:#222222"
+                    align="center"
+                >
+                    <tr></tr>
+                    <tbody id="table1"></tbody>
+                    <tbody id="table2"></tbody>
+                    <tr></tr>
+                </table>
+            
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+               
+            </div>
+        </section>
+        <!--
+    <table style="width:100%;">
+        <tr>
+            <td><div id="table1"></div></td>
+            <td><div id="table2"></div></td>
+        </tr>
+    </table>
+    -->
+
+        <footer id="footercss" style="text-align: center; font-family: 'Montserrat', sans-serif; background-color: #181818">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <ul class="list-unstyled">
+                            
+                            <li>
+                                <a
+                                    style="color: #A4A4A4"
+                                    href="https://chrome.google.com/webstore/detail/covid-19-tracker-covids-i/ifegnlipjidjmfhcpipbelmkmnmgmmfk?hl=en"
+                                    title="Click here to get Chrome Extension"
+                                     target="_blank" rel="noreferrer"
+                                    >Chrome Ext.</a
+                                >
+                            </li>
+                            
+                            <!---<li>
+                                <a style="color: #A4A4A4" href="stats">
+                                    More Statistics</a
+                                >
+                            </li>--->
+                            <!---<li>
+                                <a style="color: #A4A4A4" href="index"
+                                    >Global Impact</a
+                                >
+                            </li>--->
+                            <!---<li>
+                                <a
+                                    style="color: #A4A4A4"
+                                    href="Precautions"
+                                    >Care</a
+                                >
+                            </li>--->
+                            <li>
+                                <a style="color: #A4A4A4" href="Helpline.html"
+                                    >Help</a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a style="color: #A4A4A4" href="Aboutus.html"
+                                    >About</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        
+                <script type="text/javascript">
+        
+        function tableFunc()
+        {
+
+
+            const xhr=new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+
+                function parseDate(arg)
+                {
+                    var res=arg.split(" ");
+                    var req=res[0].split(".");
+                    var retVal="";
+                    retVal+=req[0]+" "+res[1]+" 2020";
+                    //console.log(retVal);
+                    return retVal;
+                }
+
+                var dps1=[]
+                var dps2=[]
+
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) 
+                {
+                    dataObj=JSON.parse(xhr.responseText);
+                    //parseDate(dataObj[0].Date);
+                    //console.log(dataObj[0].Date);
+                    for(var i=6;i>=0;i--)
+                    {
+
+                        dps1.push({
+
+                                x:new Date(parseDate(dataObj[i].Date)),
+                                y: dataObj[i].DailyDeaths
+                                //dataObj[i].DailyDeaths
+                                //dataObj[i]['Change  in Total']
+
+                            });
+                        dps2.push({
+
+                                x:new Date(parseDate(dataObj[i].Date)),
+                                y:dataObj[i].TotalDeaths
+
+                            });
+                    }
+                    var chart = new CanvasJS.Chart("BarChart", {
+                    animationEnabled: true,
+                    exportEnabled: true,
+                    theme: "dark1", // "light1", "light2", "dark1", "dark2"
+                    title:{
+                    text: "DAILY GLOBAL DEATHS (7 DAYS)"
+                    },
+                    data: [{
+                        type: "column", //change type to bar, line, area, pie, etc
+                        //indexLabel: "{y}", //Shows y value on all Data Points
+                        indexLabelFontColor: "#5A5757",
+                        indexLabelFontSize: 16,
+                        indexLabelPlacement: "outside",
+                        dataPoints: dps1
+                    }]
+                });
+                chart.render();
+
+                    chart = new CanvasJS.Chart("AreaChart", {
+                    animationEnabled: true,
+                    exportEnabled: true,
+                    theme: "dark1", // "light1", "light2", "dark1", "dark2"
+                    title:{
+                    text: "GLOBAL CUMULATIVE DEATHS (7 DAYS)"
+                    },
+                    data: [{
+                        type: "area", //change type to bar, line, area, pie, etc
+                        //indexLabel: "{y}", //Shows y value on all Data Points
+                        indexLabelFontColor: "#5A5757",
+                        indexLabelFontSize: 16,
+                        indexLabelPlacement: "outside",
+                        dataPoints: dps2
+                    }]
+                });
+                chart.render();
+
+                }
+
+            }
+            xhr.open("GET", 'data/TotalDeaths.txt');
+            xhr.send();
+
+
+            var xhr1 = new XMLHttpRequest();
+
+            function displayTable(data, id) {
+                var res = "";
+                for (var i = 0; i < data.length; ) {
+                    
+                    res +=
+                        '<tr style="border: 1px solid;"><td style="color: rgb(244,246,247); padding:10px; width:50%;"><b>' +
+                        data[i].Col1 +
+                        "</b></td>";
+                    i++;
+                    
+                    if(i==1)
+                    {
+                        var nf=new Intl.NumberFormat();
+                        data[i].Col1=data[i].Col1//nf.format(parseInt(data[i].Col1));
+                    }
+                    
+                    res +=
+                        '<td style="color: rgb(244,246,247); padding:10px; width:50%;" align="right">' +
+                        data[i].Col1 +
+                        "</td></tr>";
+                    i++;
+                }
+                document.getElementById(id).innerHTML = res;
+            }
+
+            xhr1.open("GET", "data/table1.txt");
+
+            xhr1.onreadystatechange = function() {
+                if (
+                    xhr1.readyState === XMLHttpRequest.DONE &&
+                    xhr1.status === 200
+                ) {
+                    
+                    
+                    var obj = JSON.parse(xhr1.responseText);
+                    displayTable(obj, "table1");
+                    document.getElementById("updatetime").innerHTML='<font size=\"2px\">Updated: '+this.getResponseHeader('Last-Modified')+'</font>';
+                    
+                }
+            };
+            xhr1.send();
+
+            var xhr2 = new XMLHttpRequest();
+
+            xhr2.open("GET", "data/table2.txt");
+
+            xhr2.onreadystatechange = function() {
+                if (
+                    xhr2.readyState === XMLHttpRequest.DONE &&
+                    xhr2.status === 200
+                ) {
+                    var obj = JSON.parse(xhr2.responseText);
+                    displayTable(obj, "table2");
+                }
+            };
+            xhr2.send();
+        }
+
+            /*
+        var xhr=new XMLHttpRequest();
+        xhr.open('GET','File1.txt');
+        xhr.send();
+
+        xhr.onreadystatechange = function(){
+
+            if(this.status === 200)
+            {
+                var obj=JSON.parse(this.responseText);
+                displayTable(obj,'File1');
+            }
+        };
+*/
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,868 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8" />
+        <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <meta property="og:site_name" content="covidsimpact.com" />
+    <meta property="og:title" content="COVIDS IMPACT: AN INTERACTIVE COVID-19 PORTAL TO MONITOR THE CURRENT TRENDS." />
+    <meta property="og:description" content="GET COVID-19 WORLD STATS | INDIA STATS | NEWS AND MORE" />
+    <meta name="description" content="GET COVID-19 WORLD STATS | INDIA STATS | NEWS AND MORE" />
+    <meta
+      property="og:image"
+      content="https://www.covidsimpact.com/assets/img/thumbnail.png"
+      alt="thumbnail"
+    />
+    <meta property="og:url" content="http://www.covidsimpact.com/index.html" />
+    <meta property="og:type" content="blog" />
+
+    <link rel='shortcut icon' href='assets/img/favicon.ico' type='image/x-icon' />
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    
+    <!--- nav icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <title>COVIDS IMPACT</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/indexcss.css" />
+    <!--    animations-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--securing external links-->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    
+    <style>
+        /* for moving link icon to the right in the nav bar on mobiles */
+      @media (max-width: 1040px){
+        .display {
+            text-align:right;
+            
+        }
+        
+        #tablecss th{
+        font-size: 8px;
+        
+    }
+
+    #tablecss td {
+         border: none;
+         font-size:10px;
+    }
+    
+    #CasesInfo, #DeathsInfo, #RecoveryInfo{
+        font-size:4px;
+    }
+    
+    }
+
+    .button {
+    background-color: transparent;
+      border: none;
+      color: white;
+      padding: 8px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      text-decoration: none;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      
+      color: black; 
+      border: 2px solid #008CBA;
+    }
+
+    .button1:hover {
+      background-color: #008CBA;
+      color: white;
+    }
+
+    .button2 {
+      
+      color: black; 
+      border: 2px solid #881415;
+    }
+
+    .button2:hover {
+      background-color: #881415;
+      color: white;
+    }
+
+    .button3 {
+      
+      color: black; 
+      border: 2px solid orange;
+    }
+
+    .button3:hover { 
+      background-color: orange;
+      color: white;
+    }
+    
+    </style>
+        
+	<style type="text/css">
+
+        #wrapper {
+            height: 580px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            overflow:visible;
+            text-align:left;
+        }
+        #regions_div {
+           float: left;
+            height: 580px; 
+            width: 75%; 
+            margin: 0;
+        }
+        #info {
+            float: left;
+            width: 270px;
+            padding-left: 20px;
+            margin: 100px 0 0 0;
+            border-left: 1px solid silver;
+            background-color: #141414;
+            color: #ffffff;
+            text-align:left;
+        }
+        /*#info h2 {
+            display: inline;
+            font-size: 13pt;
+        }*/
+        
+        #info h1 {
+            display: inline;
+            font-size: 13pt;
+            font-family: 'Montserrat', sans-serif;
+        }
+        #info .f32 .flag {
+            vertical-align: bottom !important;
+        }
+        
+        #info h4 {
+            margin: 1em 0 0 0;
+        }
+        /*rect.highcharts-background{
+            fill:#383838;
+        }*/
+        @media screen and (max-width: 1024px) {
+            #wrapper, #regions_div,  #info {
+                float: none;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            .break{
+                display:none;
+            }
+            #info{
+                text-align:center;
+            }
+        }
+        
+        
+    </style>
+</head>
+<!--<body bgcolor="#141414">-->
+
+
+
+
+
+  <body style="background-color: #141414;"><!-- onload="setTimeout(renderTable,100)"-->
+  <main>
+<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+<script src="highcharts/highcharts.js"></script>
+<script src="highcharts/map.js"></script>
+<script src="highcharts/world.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+<!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
+<link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+    <nav
+      class="navbar navbar-dark navbar-expand-md sticky-top"
+      style="background-color: #181818; font-family: 'Montserrat', sans-serif;"
+    >
+      <div class="container-fluid">
+          
+           <a href="index.html"> <img src="assets/img/logon.svg" alt="logo" height="45" width="45"></a>
+          
+        <a
+          class="navbar-brand"
+          href="index.html"
+          style="color: rgb(169,169,169);"
+          ><b>&nbsp;COVID-19 |&nbsp;<font color="#66cc66">WORLD</font></b></a
+        ><button
+          data-toggle="collapse"
+          class="navbar-toggler"
+          data-target="#navcol-1"
+        >
+          <span class="sr-only">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-left" id="navcol-1">
+        
+        <br><p id="updatetime" style="color:#6C757D"></p>
+
+          <ul class="nav navbar-nav ml-auto">
+              
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active"
+                style="color: rgb(169,169,169);"
+                href="index.html"
+                ><i class="fa fa-fw fa-globe-americas"></i>WORLD</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                href="stats.html"
+                style="color: rgb(169,169,169);"
+                ><i class="fa fa-fw fa-list-alt"></i>&nbsp;STATS</a
+              >
+            </li>
+            
+            <li class="nav-item" role="presentation">
+                <a
+                    class="nav-link"
+                    href="news.html"
+                    style="color: rgb(169,169,169);"
+                >
+                    <i class="fa fa-fw fa-newspaper"></i>&nbsp;NEWS</a>
+            </li>
+            
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                href="Precautions.html"
+                style="color: rgb(169,169,169);"
+                ><i class="fa fa-fw fa-heartbeat"></i>CARE</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                href="Helpline.html"
+                style="color: rgb(169,169,169);"
+                ><i class="fa fa-fw fa-user-md"></i>HELP</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                href="Aboutus.html"
+                style="color: rgb(169,169,169);"
+                ><i class="fa fa-fw fa-address-card"></i>&nbsp;ABOUT</a
+              >
+            </li>
+            
+             <li class="nav-item" role="presentation">
+                 <a
+                    class="nav-link display"
+                    href="apidoc.html"
+                    title="Use our API and Extension"
+                    rel="noreferrer"
+                    style="color: #66cc66;"> 
+                    <i class="fa fa-fw fa-link"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+    
+    <section id="geo-map" style="padding: 0;">
+        
+          
+
+        <table data-aos="fade-down" data-aos-duration="1500" align="center" style="font-family: 'Montserrat', sans-serif;">
+          <tr>
+            <td align="center">
+              <font size="2px"
+                ><span style="color:#A1A1A1"> AFFECTED: </span></font
+              >
+              <span id="CasesInfo"> </span>
+              <span style="color:#d5d5d7">|</span>
+            </td>
+            <td align="center">
+              <font size="2px"
+                ><span style="color:#A1A1A1"> DEATHS: </span></font
+              >
+              <span id="DeathsInfo"> </span>
+              <span style="color:#d5d5d7">|</span>
+            </td>
+            <td align="center">
+              <font size="2px"
+                ><span style="color:#A1A1A1"> CURED: </span></font
+              >
+              <span id="RecoveryInfo"> </span>
+            </td>
+          </tr>
+        </table>
+
+        
+        <div id="wrapper" data-aos="zoom-in" data-aos-duration="1500">
+          <div class="mapsize" id="regions_div"></div>
+          <div id="info">
+            <span class="f32"><span id="flag"></span></span>
+            <h1 style="color:#3db2cd; font-weight:bold;">SELECT A COUNTRY ON THE MAP TO SEE ITS RELATIVE INFORMATION</h1><br>
+            <div id="country-chart"><span id="1" style="font-family: 'Montserrat', sans-serif;"></span><br class="break"><span id="2" style="font-family: 'Montserrat', sans-serif;"></span><br class="mobile"><span id="3" style="font-family: 'Montserrat', sans-serif;"></span><br class="break"><span id="4" style="font-family: 'Montserrat', sans-serif;"></span><br class="mobile"><span id="5" style="font-family: 'Montserrat', sans-serif;"></span></div>
+          </div>
+    </div>
+    <br>
+        
+</section>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <style>
+        .NewCases{
+            display:none;
+        }
+        .NewDeaths{
+            display:none;
+        }
+        
+        .ActiveCases{
+            display:none;
+        }
+        .TotalTests{
+            display:none;
+        }
+        .Country2{
+            display:none;
+        }
+        .label2{
+            display:none;
+        }
+        
+    </style>
+
+ 
+  <table align="center" style="color:#A6A6A6; font-family: 'Montserrat', sans-serif;" data-aos="flip-down" data-aos-duration="800">
+      <tr align="center">
+         
+        <td><font size="3px; color:#A6A6A6">CRITICAL CASES:&nbsp;&nbsp;</font>
+          <span id="criticalCases"></span>
+        </td> 
+        <td><font size="3px; color:#A6A6A6">&nbsp; &nbsp;ACTIVE CASES:&nbsp;</font>
+          <span id="ActiveCases"></span>
+          </td>
+      </tr>
+  </table>
+  <br>
+    
+    
+    <center><h5 style="font-family: 'Montserrat', sans-serif;"><font color="#A1A1A1" data-aos="fade-up" data-aos-duration="800"><b><u>REGIONAL INFORMATION</u></b></font></h5></center>
+    <br>
+  <!-- TABLE SECTION -->
+
+  <center>
+    <input
+    data-aos="flip-down"
+    data-aos-duration="800"
+      type="text"
+      id="myInput"
+      placeholder="search country here"
+      title="Type in a country"
+      style="width:95%; padding:10px; background-color:#191919; color:white; border:solid 2px #A1A1A1; border-radius: 8px; outline: none;"
+    />
+  </center>
+
+  <br />
+  <section>
+    
+      
+    <section style="text-align: center;">     
+    <button data-aos="flip-down" data-aos-duration="800" class="toggler button button3" style="border-radius:8px">
+      <a style="text-decoration: inherit; color: whitesmoke; font-family: 'Montserrat', sans-serif;">
+          <span class="label1"><section style="text-align:center;"><i class="fa fa-fw fa-toggle-off"></i>&nbsp;SWITCH</section></span><span class="label2"><section style="text-align:center;"><i class="fa fa-fw fa-toggle-on"></i>&nbsp;SWITCH</section></span>
+    </a>
+    </button>
+    
+     <button data-aos="flip-down" data-aos-duration="800" class="button button1" style="border-radius:8px">
+      <a
+        style="text-decoration: inherit; color: whitesmoke; font-family: 'Montserrat', sans-serif;"
+        href="indiaInfo.html"
+        ><span><img src="assets/img/india.svg" alt ="IND">&nbsp;COVID INDIA</span></a
+      >
+    </button>
+    
+    </section>
+          
+    
+
+    <br>    
+    <div
+      data-aos="fade-down"
+      data-aos-duration="800"
+      id="tablecss"
+      style=""
+    ></div>
+  </section>
+
+  <script type="text/javascript">
+    document.getElementById("myInput").onkeyup = function() {
+      var input, filter, table, tableBod, tr, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = (input.value.toUpperCase()).trim();
+
+      tableBod = document.getElementById("tablecss");
+      table = tableBod.getElementsByTagName("table")[0];
+      tbody = table.getElementsByTagName("tbody");
+      //tr = tbody.getElementsByTagName("tr");
+
+      for (k = 0; k < tbody.length; k++) {
+        tr = tbody[k].getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+          a = tr[i].getElementsByTagName("td")[0];
+          txtValue = a.textContent || a.innerText;
+          //if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          if (filter.indexOf(txtValue.toUpperCase()) > -1 || txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    };
+  </script>
+
+ <!---Chatbot-->
+<script type="text/javascript">
+      
+      (function(d, m){
+        var kommunicateSettings = {"appId":"c3c8a8a6fe6decdb196b5c560dac891e","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+      })(document, window.kommunicate || {});
+  </script>
+          
+  <br><br>
+  <section style="text-align: center;">
+    <button data-aos="flip-down" class="button button1" style="border-radius:8px">
+      <a style="text-decoration: inherit; color: whitesmoke; font-family: 'Montserrat', sans-serif;" href="stats.html"
+        ><span
+          ><i class="fa fa-fw fa-th-list"></i>&nbsp;STATS</span
+        ></a
+      >
+    </button>
+    <button data-aos="flip-down" class="button button2" style="border-radius:8px">
+      <a
+        style="text-decoration: inherit; color: whitesmoke; font-family: 'Montserrat', sans-serif;"
+        href="Helpline.html"
+        ><span><i class="fa fa-fw fa-user-md"></i>&nbsp;GET HELP</span></a
+      >
+    </button>
+  </section>
+  <br />
+  <br>
+  <br>
+  <br>
+   <br>
+  <footer
+    id="myFooter"
+    style="  padding: 0px; background-color: #181818; padding-top: 19px; font-family: 'Montserrat', sans-serif;"
+  >
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-12">
+          <ul class="list-unstyled">
+              
+            <li>
+               <a style="color: #A4A4A4" href="https://chrome.google.com/webstore/detail/covid-19-tracker-covids-i/ifegnlipjidjmfhcpipbelmkmnmgmmfk?hl=en" 
+               title="Click here to get Chrome Extension"
+                target="_blank" rel="noreferrer">Chrome Ext.</a>
+            </li>
+            
+            <li><a style="color: #A4A4A4" href="Helpline">Help</a></li>
+            <li><a style="color: #A4A4A4" href="Aboutus">About</a></li>
+          </ul>
+          <p class="footer-copyright" style="color:#66cc66; font-size:15px">
+             
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+    
+
+<script type="text/javascript">
+    var data=[];
+    
+    
+    $(document).ready(function()
+      {
+
+      $(".toggler").click(function()
+      {
+          
+        $(".Country1").toggle();
+        $(".Country2").toggle();
+
+        $(".NewCases").toggle();
+        $(".Affected").toggle();
+
+        $(".NewDeaths").toggle();
+        $(".Deaths").toggle();
+
+        $(".ActiveCases").toggle();
+        $(".Critical").toggle();
+
+        $(".TotalTests").toggle();
+        $(".Recovered").toggle();
+        
+        $(".label1").toggle();
+        $(".label2").toggle();
+
+        });
+    });
+    
+    function formatting(arg) {
+              var nf = new Intl.NumberFormat();
+              var retVal = nf.format(arg);
+              return retVal;
+            }
+            
+      totalCases = 0;
+      totalDeaths = 0;
+      totalRecoveries = 0;
+      
+      var totDeaths,totCases,totRecoveries;
+      var argVal;
+      var flag=0;
+var xhr= $.getJSON('/data/data.txt', function(dataObj)
+{
+    document.getElementById("criticalCases").innerHTML='<font size=\"5px\"; color="#ff073a"><b> ' + formatting(dataObj[0].Critical) + "&nbsp;</b></font>" ;
+    document.getElementById("ActiveCases").innerHTML='<font size=\"5px\"; color="#9673b9"><b> '+formatting(dataObj[0].ActiveCases)+ "</b></font>";
+    
+    totalCases=dataObj[0].Cases;
+    totalDeaths=dataObj[0].Deaths;
+    totalRecoveries=dataObj[0].Recoveries;
+    document.getElementById("updatetime").innerHTML='<font size=\"2px\">Updated: '+xhr.getResponseHeader('Last-Modified')+'</font>';
+    
+    var totRow = "";
+            var resHead = "";
+            var res = '<table class="table" style=" "><tbody>';
+            resHead +=
+              '<thead><tr><th style=\" color: #141414; text-align: center; position: sticky; top: 60px; background-color: #a1a1a1;" class=\"Country1\"><center><strong>AFFECTED COUNTRY</strong></center></th>';
+              
+            resHead +=
+              '<th style=" color: #141414; text-align: center; position: sticky; top: 60px; background-color: orange;" class=\"Country2\"><center><strong>AFFECTED COUNTRY</strong></center></th>';
+            
+            resHead +=
+              '<th style="color: #141414 ; text-align: center;  position: sticky; top: 60px; background-color: #a1a1a1;" class=\"Affected\"><center><strong>PEOPLE AFFECTED</strong></center></th>';
+            resHead +=
+              '<th style="color: #141414; text-align: center; position: sticky; top: 60px; background-color: orange;" class=\"NewCases\"><center><strong>NEW CASES</strong></center></th>';
+            resHead +=
+              '<th style="color: #141414; text-align: center; position: sticky; top: 60px; background-color: #a1a1a1;" class=\"Critical\"><center><strong>CRITICAL CASES</strong></center></th>';
+            resHead +=
+              '<th style="color: #141414; text-align: center; position: sticky; top: 60px; background-color: orange;" class=\"ActiveCases\"><center><strong>ACTIVE CASES<strong></center></th>';  
+
+            resHead +=
+              '<th style="color: #141414; text-align: center; position: sticky; top: 60px; background-color: #a1a1a1;" class=\"Deaths\"><center><strong>DEATH TOLL</strong></center></th>';
+            resHead +=
+              '<th style="color: #141414; text-align: center; position: sticky; top: 60px; background-color: orange;"class=\"NewDeaths\"><center><strong>NEW DEATHS</strong></center></th>';
+            resHead +=
+              '<th style="color: #141414; text-align: center; position: sticky; top: 60px; background-color: #a1a1a1;" class=\"Recovered\"><center><strong>PEOPLE CURED</strong></center></th>';
+            resHead +=
+              '<th style="color: #141414; text-align: center; position: sticky; top: 60px; background-color: orange;" class=\"TotalTests\"><center><strong>TESTS CONDUCTED</strong></center></th></tr></thead>';
+    
+        for(i=1;i<dataObj.length;i++)
+        {
+            if (dataObj[i].Deaths === null) dataObj[i].Deaths = 0;
+              if (dataObj[i].Recoveries === null)
+                dataObj[i].Recoveries = 0;
+              if (dataObj[i].Critical === null) dataObj[i].Critical = 0;
+            
+            if(flag==1 && dataObj[i].Country==='Channel Islands')
+                continue;   
+            if(dataObj[i].Country==='Channel Islands')
+                flag=1;   
+            if(dataObj[i].Country!='Total:')
+            {
+            data.push({
+                name: dataObj[i].Country,
+                code3: dataObj[i].code3,
+                value: dataObj[i].Cases,
+                active: dataObj[i].ActiveCases,
+                critical:dataObj[i].Critical,
+                deaths: dataObj[i].Deaths,
+                cured: dataObj[i].Recoveries
+                });
+            //totalCases += dataObj[i].Cases;
+            //totalDeaths += dataObj[i].Deaths;
+            //totalRecoveries += dataObj[i].Recoveries;
+            }
+            
+            
+              
+
+              if (dataObj[i].Country === "Total:") {
+                totRow += "<tbody>";
+                totRow +=
+                  '<tr><td style="color: rgb(244,246,247); text-align: center; " class=\"Country1\"><b>TOTAL</b></td>';
+                totRow +=
+                  '<td style="color: rgb(244,246,247); text-align: center; " class=\"Country2\"><b>TOTAL</b></td>';
+                totRow +=
+                  '<td style="color: rgb(246,247,249); text-align: center;" class=\"Affected\"><b>' +
+                  formatting(dataObj[i].Cases) +
+                  "</b></td>";
+                totRow +=
+                  '<td style="color: rgb(246,247,249); text-align: center;" class=\"NewCases\"><b>' +
+                  dataObj[i].NewCases +
+                  "</b></td>";  
+                totRow +=
+                  '<td style="color: rgb(246,248,250); text-align: center;" class=\"Critical\"><b>' +
+                  formatting(dataObj[i].Critical) +
+                  "</b></td>";
+                totRow +=
+                  '<td style="color: rgb(246,248,250); text-align: center;" class=\"ActiveCases\"><b>' +
+                  formatting(dataObj[i].ActiveCases) +
+                  "</b></td>";  
+                totRow +=
+                  '<td style="color: rgb(247,248,249); text-align: center;" class=\"Deaths\"><b>' +
+                  formatting(dataObj[i].Deaths) +
+                  "</b></td>";
+                totRow +=
+                  '<td style="color: rgb(247,248,249); text-align: center;" class=\"NewDeaths\"><b>' +
+                  dataObj[i].NewDeaths +
+                  "</b></td>";  
+                totRow +=
+                  '<td style="color: rgb(247,248,249); text-align: center;" class=\"Recovered\"><b>' +
+                  formatting(dataObj[i].Recoveries) +
+                  "</b></td>";
+                  if(dataObj[i].TotalTests=== null)
+                    totRow +=
+                  '<td style="color: rgb(247,248,249); text-align: center;" class=\"TotalTests\"><b>-</b></td></tr></tbody>';  
+                  else
+                    totRow +=
+                      '<td style="color: rgb(247,248,249); text-align: center;" class=\"TotalTests\"><b>' +
+                      formatting(dataObj[i].TotalTests) +
+                      "</b></td></tr></tbody>";  
+              } 
+              else 
+              {
+                res +=
+                  '<tr><td style="color: rgb(244,246,247); text-align: center; " class=\"Country1\">' +
+                  dataObj[i].Country +
+                  "</td>";
+                  
+                res +=
+                  '<td style="color: rgb(244,246,247); text-align: center;" class=\"Country2\">' +
+                  dataObj[i].Country +
+                  "</td>";
+                
+                res +=
+                  '<td style="color: #FFC101; text-align: center;" class=\"Affected\">' +
+                  formatting(dataObj[i].Cases) +
+                  "</td>";
+                res +=
+                  '<td style="color: #FFC101; text-align: center;" class=\"NewCases\">' +
+                  dataObj[i].NewCases +
+                  "</td>";  
+                res +=
+                  '<td style="color: #ff073a; text-align: center;" class=\"Critical\">' +
+                  formatting(dataObj[i].Critical) +
+                  "</td>";
+                res +=
+                  '<td style="color: #9673b9; text-align: center;" class=\"ActiveCases\">' +
+                  formatting(dataObj[i].ActiveCases) +
+                  "</td>";
+                res +=
+                  '<td style="color: rgb(247,248,249); text-align: center;" class=\"Deaths\">' +
+                  formatting(dataObj[i].Deaths) +
+                  "</td>";
+                res +=
+                  '<td style="color: rgb(247,248,249); text-align: center;" class=\"NewDeaths\">' +
+                  dataObj[i].NewDeaths +
+                  "</td>";
+                res +=
+                  '<td style="color:#28a745; text-align: center;" class=\"Recovered\">' +
+                  formatting(dataObj[i].Recoveries) +
+                  "</td>";
+                if(dataObj[i].TotalTests=== null)
+                  res +=
+                  '<td style="color:#28a745; text-align: center;" class=\"TotalTests\">-</td></tr>';  
+                else
+                  res +=
+                    '<td style="color:#28a745; text-align: center;" class=\"TotalTests\">' +
+                    formatting(dataObj[i].TotalTests)+
+                    "</td></tr>";  
+              }
+        }
+        
+        document.getElementById("tablecss").innerHTML = res + "</tbody>" + totRow + resHead + "</table>";
+        //argVal=res + "</tbody>" + totRow + resHead + "</table>";
+        totDeaths = formatting(totalDeaths);
+        totCases = formatting(totalCases);
+        totRecovered = formatting(totalRecoveries);
+        var date = fetch_date();
+        document.getElementById("CasesInfo").innerHTML =
+              '<font color="#FFC101" size="4px"><b>' + totCases + "</b></font>";
+            document.getElementById("DeathsInfo").innerHTML =
+              '<font color="white"  size="4px"><b>' + totDeaths + "</b></font>";
+
+            document.getElementById("RecoveryInfo").innerHTML =
+              '<font color="#28a745" size="4px"><b>' + totRecovered + "</b></font>";
+        
+        function renderTable()
+        {
+            document.getElementById("tablecss").innerHTML = argVal;
+            
+            //console.log(argVal);
+        }
+        
+        function fetch_date() {
+        var dateObj = new Date();
+        var month = dateObj.getUTCMonth() + 1; //months from 1-12
+        var day = dateObj.getUTCDate();
+        var year = dateObj.getUTCFullYear();
+
+        newdate = day + "/" + month + "/" + year;
+
+        return newdate;
+      }
+        
+
+        // Add lower case codes to the data set for inclusion in the tooltip.pointFormat
+        var mapData = Highcharts.geojson(Highcharts.maps['custom/world']);
+        $.each(mapData, function () {
+            this.id = this.properties['hc-key']; // for Chart.get()
+            this.flag = this.id.replace('UK', 'GB').toLowerCase();
+        });
+
+        // Wrap point.select to get to the total selected points
+        Highcharts.wrap(Highcharts.Point.prototype, 'select', function (proceed) {
+
+            proceed.apply(this, Array.prototype.slice.call(arguments, 1));
+
+            var points = mapChart.getSelectedPoints();
+            if (points.length) {
+                if (points.length === 1) {
+                    $('#info #flag').attr('class', 'flag ' + points[0].flag);
+                    $('#info h1').html((points[0].name).toUpperCase());
+                    $('#1').html("<span style=\"color:#a1a1a1; font-size:14px\"> AFFECTED </span> : <b><span style=\"color:#ffc101; font-size:18px;\">" +formatting(points[0].value)+ "</span></b>&nbsp;&nbsp;");
+                    $('#2').html("<span style=\"color:#a1a1a1; font-size:14px\"> CRITICAL</span> : <b><span style=\"color:#ff073a; font-size:18px;\">" +formatting(points[0].critical)+"</b>&nbsp;&nbsp;");
+                    $('#3').html("<span style=\"color:#a1a1a1; font-size:14px\"> ACTIVE CASES </span> : <b><span style=\"color:#9673b9; font-size:18px;\">" +formatting(points[0].active)+"</b>&nbsp;&nbsp;");
+                    $('#4').html("<span style=\"color:#a1a1a1; font-size:14px\"> DEATHS </span> : <b><span style=\"color:white; font-size:18px; \">" +formatting(points[0].deaths)+"</b>&nbsp;&nbsp;");
+                    $('#5').html("<span style=\"color:#a1a1a1; font-size:14px\"> CURED </span> : <b><span style=\"color:#28a745; font-size:18px;\">" +formatting(points[0].cured)+"</b>&nbsp;");
+                } 
+                else
+                {
+                    $('#info h2').html("SELECT A COUNTRY ON THE MAP TO SEE ITS RELATIVE INFORMATION");
+                    $('#info #country-chart').html("");
+                }
+                
+            }
+            
+        });
+
+        // Initiate the map chart
+        mapChart = Highcharts.mapChart('regions_div', {
+
+            chart:{
+                backgroundColor: "#141414",
+                
+            },
+            
+            
+            title: {
+                style:{
+                    color:"#ffffff"
+                },
+                text: ''
+            },
+
+
+            mapNavigation: {
+                enabled: false,
+                enableDoubleClickZoomTo: false,
+                enableMouseWheelZoom: false,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
+            },
+
+            colorAxis: {
+                type: 'logarithmic',
+                minColor: '#07cff6',
+                maxColor: '#0d2534',
+                endOnTick: false,
+                startOnTick: false,
+                min: 1
+            },
+            
+            exporting: {
+                enabled: false, 
+                
+            }, 
+
+            tooltip: {
+                enabled: false,
+                footerFormat: '<span style="font-size: 10px">(CLICK FOR DETAILS)</span>'
+            },
+
+            series: [{
+               /* animation: {
+                duration: 150
+            },*/
+                data: data,
+                mapData: mapData,
+                joinBy: ['iso-a3', 'code3'],
+                name: '',
+                allowPointSelect: true,
+                borderColor: 'white',
+                borderWidth: 0.4,
+                cursor: 'pointer',
+                states: {
+                    select: {
+                        color: '#7be495',
+                        borderColor: 'black',
+                        dashStyle: 'line'
+                    }
+                }
+            }]
+        });//if
+
+        // Pre-select a country
+        //mapChart.get('us').select();
+//    }//success
+});
+		</script>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+.table-responsive {
+  color: rgb(252,253,255);
+}
+
+#tablecss {
+  margin: 0 auto;
+  font-size: 11px;
+}
+
+@media (min-width: 576px) {
+  #tablecss {
+    margin: 0 auto;
+    font-size: 19px;
+  }
+}
+

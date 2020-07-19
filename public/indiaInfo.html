@@ -1,0 +1,970 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- *** -->
+        <link rel='shortcut icon' href='assets/img/favicon.ico' type='image/x-icon' />
+
+            <meta property="og:site_name" content="covidsimpact.com" />
+            <meta property="og:title" content="COVIDS IMPACT" />
+            <meta property="og:description" content="COVID-19 INDIA REGIONAL INFORMATION" />
+            <meta name="description" content="COVID-19 INDIA REGIONAL INFORMATION" />
+            <meta
+              property="og:image"
+              content="https://www.covidsimpact.com/assets/img/thumbnail.png"
+              alt="thumbnail"
+            />
+            <meta property="og:url" content="http://www.covidsimpact.com/indiaInfo.html" />
+            <meta property="og:type" content="blog" />
+    
+        <!--securing external links-->
+       <meta
+            http-equiv="Content-Security-Policy"
+            content="upgrade-insecure-requests"
+             />
+             
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    
+    <!--- nav icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+
+    <title>IMPACT ON INDIA</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/indinfocss.css" />
+    
+    <!--    animations-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    
+     <style>
+        /* for moving link icon to the right in the nav bar on mobiles */
+      @media (max-width: 1040px){
+        .display {
+            text-align:right;
+            
+        }
+    
+    }
+
+      
+.navbar-toggler{
+    background-color: #222222;
+}
+.mapsize{
+    height: 30vh;
+    width: 100%;
+}
+
+
+
+#side-menu {
+        background-color: #222222;
+      }
+
+#CasesInfo{
+  font-size:25px;
+}
+
+#DeathsInfo{
+  font-size:25px;
+}
+
+#RecoveryInfo{
+  font-size:25px;
+}
+
+@media (min-width: 400px){
+    .mapsize{
+    height: 80vh;
+    width: 100%;
+}
+}
+
+.infoaize{
+    color: rgb(177,177,177); 
+    text-align: left;
+}
+
+
+#allInfo{font-weight: bold;
+  color: #A1A1A1;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+   text-align: left;
+}
+
+.infosize{
+ font-size: 4px;   
+}
+
+@media (max-width: 400px){
+    #tablecss th{
+        font-size: 8px;
+        
+    }
+    
+    #tablecss td {
+         border: none;
+    }   
+    
+   /* #tablecss table{
+        width: 90%;
+    }*/
+    
+
+}
+  
+
+.button {
+ background-color: transparent;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button2 {
+  
+  color: black; 
+  border: 2px solid #881415;
+}
+
+.button2:hover {
+  background-color: #881415;
+  color: white;
+}
+
+.button3 {
+  
+  color: black; 
+  border: 2px solid orange;
+}
+
+.button3:hover {
+  background-color: orange;
+  color: white;
+}
+
+#footercss{
+    position: relative;
+    height: 9vh; 
+    background-color: #222222;
+    width: 100%;
+    color: white;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    padding-top: 22px;
+    
+    grid-auto-flow: row;
+}
+
+#myFooter {
+  padding-top: 32px;
+}
+
+#myFooter .footer-copyright {
+  margin-bottom: 35px;
+  text-align: center;
+  color: #777;
+}
+
+#myFooter ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+#myFooter a {
+  color: #282b2d;
+  font-size: 18px;
+}
+
+#myFooter li {
+  display: inline-block;
+  margin: 0px 15px;
+  line-height: 2;
+}
+
+#myFooter .fa {
+  font-size: 36px;
+  margin-right: 15px;
+  margin-left: 20px;
+  background-color: white;
+  color: #d0d0d0;
+  border-radius: 51%;
+  padding: 10px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  line-height: 43px;
+  text-decoration: none;
+  transition: color 0.2s;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+#myFooter {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+    </style>
+
+
+    <!-- *** -->
+
+    <style type="text/css">
+
+#wrapper {
+    height: 580px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow:visible;
+    text-align:left;
+}
+
+#visualization{
+    float: left;
+    height: 580px; 
+    width: 75%; 
+    margin: 0;
+}
+
+#info {
+    float: left;
+    width: 270px;
+    padding-left: 20px;
+    margin: 100px 0 0 0;
+    border-left: 1px solid silver;
+    background-color: #141414;
+    color: #ffffff;
+    text-align:left;
+}
+#info h1 {
+    display: inline;
+    font-size: 13pt;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#info #flag img{
+    height:40px;
+    width:40px;
+}
+
+
+/*.break{
+    display:block;
+}*/
+
+@media screen and (max-width: 1024px) {
+    #wrapper, #visualization,  #info, #country-chart {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin:  0;
+        padding: 0;
+        border: none;
+    }
+    
+    .break{
+        display:none;
+    }
+    #info{
+        text-align:center;
+    }
+}
+	</style>
+</head>
+
+<main>
+  <body style="background-color: #141414;" onload="loading();">
+<!-- <body bgcolor="#141414"> -->
+<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+<!--<script src="highcharts.js"></script>
+<script src="map.js"></script>-->
+
+
+<!--<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>-->
+
+<script src="highcharts/highmaps.js"></script>
+<script src="highcharts/exporting.js"></script>
+
+<script src="highcharts/in-all-disputed.js"></script>
+
+<!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
+
+<nav
+      class="navbar navbar-dark navbar-expand-md sticky-top"
+      style="background-color: #181818; font-family: 'Montserrat', sans-serif;"
+    >
+      <div class="container-fluid">
+
+         <a href="index.html"> <img src="assets/img/logon.svg" alt="logo" height="45" width="45"></a>
+
+        <a
+          class="navbar-brand"
+          href="index.html"
+          style="color: rgb(169,169,169);"
+          ><b>&nbsp;COVID-19 |&nbsp;<font color="#66cc66">INDIA</font></b></a
+        ><button
+          data-toggle="collapse"
+          class="navbar-toggler"
+          data-target="#navcol-1"
+        >
+          <span class="sr-only">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-left" id="navcol-1">
+            
+         <p id="updatetime" style="color:#6C757D"></p>
+
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                style="color: rgb(169,169,169);"
+                href="index.html"
+                ><i class="fa fa-fw fa-globe-americas"></i>WORLD</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                href="stats.html"
+                style="color: rgb(169,169,169);"
+                ><i class="fa fa-fw fa-list-alt"></i>&nbsp;STATS</a
+              >
+            </li>
+            
+            <li class="nav-item" role="presentation">
+                <a
+                    class="nav-link"
+                    href="news.html"
+                     style="color: rgb(169,169,169);"
+                      ><i class="fa fa-fw fa-newspaper"></i>&nbsp;NEWS</a>
+            </li>
+            
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                href="Precautions.html"
+                style="color: rgb(169,169,169);"
+                ><i class="fa fa-fw fa-heartbeat"></i>CARE</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                href="Helpline.html"
+                style="color: rgb(169,169,169);"
+                ><i class="fa fa-fw fa-user-md"></i>HELP</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                href="Aboutus.html"
+                style="color: rgb(169,169,169);"
+                ><i class="fa fa-fw fa-address-card"></i>&nbsp;ABOUT</a
+              >
+            </li>
+            
+            <li class="nav-item display" role="presentation">
+                 <a
+                    class="nav-link"
+                    href="apidoc.html"
+                    title="Use our API and Extension"
+                    rel="noreferrer"
+                    style="color: #66cc66;"> 
+                    <i class="fa fa-fw fa-link"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <section id="geo-map"><!--style="padding: 0;" -->
+          
+           <div
+                    class="card"
+                    style="background-color: #141414; color: antiquewhite; text-align: justify"
+                >
+        
+        </div>
+        <br>
+  <center>
+  <table data-aos="fade-down" data-aos-duration="1500" align="center" style="font-family: 'Montserrat', sans-serif;">
+          <tr>
+            <td align="center">
+              <font size="3px">
+                  <span style="color:#A1A1A1"> AFFECTED: </span>
+              </font>
+              <span id="CasesInfo"></span>
+              <span style="color:#d5d5d7">|</span>
+            </td>
+            <td align="center">
+              <font size="3px">
+                <span style="color:#A1A1A1"> DEATHS: </span>
+              </font>
+              <span id="DeathsInfo"></span>
+              <span style="color:#d5d5d7">|</span>
+            </td>
+            <td align="center">
+              <font size="3px">
+                  <span style="color:#A1A1A1"> CURED: </span>
+              </font>
+              <span id="RecoveryInfo"></span>
+            </td>
+          </tr>
+      </table>
+      </center>
+        
+          <center>
+              <div id="wrapper" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="mapsize" id="visualization"></div>
+              <div id="info">
+                <span id="flag"></span>
+                <h1 style="color:#3db2cd; font-weight:bold;">SELECT A STATE ON THE MAP TO SEE ITS RELATIVE INFORMATION</h1>
+                <div id="country-chart"><span id="1" style="font-family: 'Montserrat', sans-serif;"></span><br class="break"><span id="2" style="font-family: 'Montserrat', sans-serif;"></span><br class="mobile"><span id="3" style="font-family: 'Montserrat', sans-serif;"></span><br class="break"><span id="4" style="font-family: 'Montserrat', sans-serif;"></span></div>
+              </div>
+            </div>
+          </center>
+    </section>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <br>
+    
+    <!-- ********** -->
+
+  <!-- TABLE SECTION -->
+
+  <table align="center" style="color:#A6A6A6; font-family: 'Montserrat', sans-serif;" data-aos="flip-down" data-aos-duration="800" cell-padding:3px>
+      <tr align="center">
+         
+        <td><font size="2px; color:#A6A6A6"><b>CASES YESTERDAY:&nbsp;&nbsp;</b></font>
+          <span id="newCases"></span>
+        </td> 
+        <td><font size="2px; color:#A6A6A6"><b>&nbsp; &nbsp;TESTS CONDUCTED:&nbsp;</b></font>
+          <span id="totalTests"></span>
+          </td>
+      </tr>
+  </table>
+  <br>
+  <center><h5 style="font-family: 'Montserrat', sans-serif;"><font color="#A1A1A1" data-aos="fade-up" data-aos-duration="800"><b><u>REGIONAL INFORMATION</u></b></font></h5></center>
+  <br>
+  <center>
+    <input
+     data-aos="flip-down"
+        data-aos-duration="800"
+      type="text"
+      id="myInput"
+      placeholder="search state here"
+      title="Type in a State"
+      style="width:95%; padding:10px; background-color:#191919; color:white; border:solid 2px #A1A1A1; border-radius: 8px; outline: none;"
+    />
+  </center>
+  
+  
+ <section>
+ <br>  
+    <center>
+        
+        <section style="text-align:center;">
+            <button data-aos="flip-down" data-aos-duration="800" class="toggler button button3" style="border-radius:8px"><a style="text-decoration:inherit;color:whitesmoke;"><span class="label1"><section style="text-align:center; font-family: 'Montserrat', sans-serif;"><i class="fa fa-fw fa-toggle-off"></i>&nbsp;YESTERDAY'S STATS</section></span><span class="label2"><section style="text-align:center; font-family: 'Montserrat', sans-serif;"><i class="fa fa-fw fa-toggle-on"></i>&nbsp;YESTERDAY'S STATS</section></span>
+            </a>
+            </button>
+        </section>
+        
+        <!--<section style="text-align:center;">
+            <button data-aos="flip-up" data-aos-duration="800" class="toggler button button1"><a style="text-decoration:inherit;color:whitesmoke;"><span class="label1"><section style="text-align:center;"><i class="fa fa-fw fa-sort"></i>&nbsp;YESTERDAY'S DATA</section></span><span class="label2"><section style="text-align:center;"><i class="fa fa-fw fa-sort"></i>&nbsp;TODAY'S DATA</section></span>
+            </a>
+            </button>
+        </section>-->
+    </center> 
+
+    <br>
+    <div
+      data-aos="fade-down"
+      data-aos-duration="800"
+      id="tablecss"
+      class="tag1 search"
+    >
+</div>
+<div
+      data-aos="fade-down"
+      data-aos-duration="800"
+      id="tablecss"
+      class="tag2 search"
+    >
+</div>
+  </section>
+
+  <script type="text/javascript">
+    document.getElementById("myInput").onkeyup = function() {
+      var input, filter, table, tableBod, tr, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = (input.value.toUpperCase()).trim();
+      tableBod = document.getElementsByClassName("search");
+      
+
+
+      table1 = tableBod[0].getElementsByTagName("table")[0];
+      tbody = table1.getElementsByTagName("tbody");
+      //tr = tbody.getElementsByTagName("tr");
+
+      for (k = 0; k < tbody.length; k++) {
+        tr = tbody[k].getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+          a = tr[i].getElementsByTagName("td")[0]; //search by the first data item in a row
+          txtValue = a.textContent || a.innerText;
+          //if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          if (filter.indexOf(txtValue.toUpperCase()) > -1 || txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+
+
+      table2 = tableBod[1].getElementsByTagName("table")[0];
+      tbody = table2.getElementsByTagName("tbody");
+      //tr = tbody.getElementsByTagName("tr");
+
+      for (k = 0; k < tbody.length; k++) {
+        tr = tbody[k].getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+          a = tr[i].getElementsByTagName("td")[0]; //search by the first data item in a row
+          txtValue = a.textContent || a.innerText;
+          //if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          if (filter.indexOf(txtValue.toUpperCase()) > -1 || txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    };
+  </script>
+
+  
+  <br>
+  <section style="text-align: center;">
+    <button data-aos="flip-down" class="button button1" style="border-radius:8px">
+      <a style="text-decoration: inherit; color: whitesmoke; font-family: 'Montserrat', sans-serif;" href="index.html"
+        ><span
+          ><i class="fa fa-fw fa-globe-americas"></i>&nbsp;WORLD</span
+        ></a
+      >
+    </button>
+    <button data-aos="flip-down" class="button button2" style="border-radius:8px">
+      <a
+        style="text-decoration: inherit; color: whitesmoke; font-family: 'Montserrat', sans-serif;"
+        href="Helpline.html"
+        ><span><i class="fa fa-fw fa-user-md"></i>&nbsp;GET HELP</span></a
+      >
+    </button>
+  </section>
+  <br />
+  
+  <div class="container">
+                <div
+                
+                    style="background-color: #141414; color: antiquewhite; text-align: justify"
+                >
+                    <div class="card-body">
+                        <strong><h4
+                            
+                            style="color: #A1A1A1; font-family: 'Montserrat', sans-serif;"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        >
+                            GET AAROGYA SETU
+                        </h4></strong>
+                        
+                        <p style="font-family: 'Montserrat', sans-serif;">
+                            The government of India has developed <font color="#66cc66"><b>Aarogya Setu</b></font> Mobile App that 
+                            users can download on their respective smartphones which helps them to connect to essential health services and locate nearby cases around
+                            their area in a combined effort to fight against COVID-19.
+                            Download now on <a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN"  target="_blank" rel="noreferr">ANDROID</a> or
+                            <a href="https://apps.apple.com/in/app/aarogyasetu/id1505825357"  target="_blank" rel="noreferrer">IOS</a>.
+                        </p>
+                        </div>
+                        </div>
+                        </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+ 
+  <!--
+<div id="footercss" style="text-align: center">
+    <table >
+    <tr>
+        <td><a style="color: rgb(169,169,169);" href="Helpline">Get Help!</a></td>    
+    </tr>
+    </table>
+</div>
+-->
+  <footer
+    id="myFooter"
+    style="  padding: 0px; background-color: #181818; padding-top: 19px; font-family: 'Montserrat', sans-serif;"
+  >
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-12">
+          <ul class="list-unstyled">
+            
+            <!---<li>
+              <a style="color: #A4A4A4" href="stats">More Statistics</a>
+            </li>--->
+            
+            <li>
+              <a style="color: #A4A4A4" href="https://chrome.google.com/webstore/detail/covid-19-tracker-covids-i/ifegnlipjidjmfhcpipbelmkmnmgmmfk?hl=en" 
+              title="Click here to get Chrome Extension"
+             target="_blank" rel="noreferrer">Chrome Ext.</a>
+            </li>
+            
+            <li><a style="color: #A4A4A4" href="Helpline.html">Help</a></li>
+            <li><a style="color: #A4A4A4" href="Aboutus.html">About</a></li>
+          </ul>
+          <p class="footer-copyright">
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    
+    <!-- ********** -->
+	<script type="text/javascript">
+    var data=[];
+    
+    function loading()
+      {
+        $(".tag2").hide();
+        $(".label2").hide();
+      }
+
+      $(document).ready(function()
+      {
+
+      $(".toggler").click(function()
+      {
+
+        $(".tag1").toggle();
+        $(".tag2").toggle();
+        $(".label1").toggle();
+        $(".label2").toggle();
+
+        });
+    });
+    
+    function formatting(arg) 
+      {
+        var nf = new Intl.NumberFormat();
+        var retVal = nf.format(arg);
+        return retVal;
+      }
+      
+      function formatDate(arg)
+      {
+          var day=arg.split(" ");
+          var dayName=day[0];
+          var monthName=day[1];
+          var dayNum=day[2];
+          var year=day[3];
+          var time=day[4];
+          
+          return dayName+", "+dayNum+" "+monthName+" "+year+" "+time+" IST";
+      }
+    var xhr=$.getJSON('data/india/stateData.txt',function(dataObj)
+    {
+        function checkPlus(arg)
+        {
+            if(arg.startsWith("+"))
+                return arg//return arg.slice(1,arg.length);
+            else
+                return "+"+arg;
+        }
+        var lastUpdated=new Date(xhr.getResponseHeader('Last-Modified')).toString();
+          document.getElementById("CasesInfo").innerHTML= '<font color="#FFC101">' + formatting(dataObj[0].TotalCases) + "</font>";
+          document.getElementById("DeathsInfo").innerHTML='<font color="white">' + formatting(dataObj[0].Deaths) + "</font>"; 
+          document.getElementById("RecoveryInfo").innerHTML='<font color="#28a745">' + formatting(dataObj[0].Cured)+ "</font>";
+          
+          document.getElementById("updatetime").innerHTML='<font size=\"2px\">Updated: '+formatDate(lastUpdated)+'</font>';
+            //console.log(lastUpdated.split(" ")[4]);
+          
+          document.getElementById("totalTests").innerHTML='<font size=\"5px\"; color="#28a745"><b> ' + formatting(dataObj[0].TotalTests) + "&nbsp;</b></font>" ;
+          document.getElementById("newCases").innerHTML='<font size=\"5px\"; color="#FFC101"><b> '+checkPlus(dataObj[0].NewCases) + "</b></font>";
+
+          var tableStr="<table class=\"table\"><thead><tr>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 60px; background-color: #A1A1A1;\" ><center><strong>AFFECTED INDIAN STATE</strong></center></th>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 60px; background-color: #A1A1A1;\" ><center><strong>PEOPLE AFFECTED</strong></center></th>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 60px; background-color: #A1A1A1;\" ><center><strong>ACTIVE CASES</strong></center></th>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 60px; background-color: #A1A1A1;\" ><center><strong>DEATH TOLL</strong></center></th>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 60px; background-color: #A1A1A1;\" ><center><strong>PEOPLE CURED</strong></center></th>"
+          tableStr += "</tr></thead><tbody>";
+          
+        for(i=1;i<dataObj.length;i++)
+        {
+            if((dataObj[i].State).includes('Total') || (dataObj[i].State).includes('Reassigned'))
+                continue;
+            if(dataObj[i].State==='Delhi')
+            {
+                data.push({
+                name: ("nct of "+(dataObj[i].State).toLowerCase()),
+                deaths: parseInt(dataObj[i].Deaths),
+                value: parseInt(dataObj[i].TotalCases),
+                cured: parseInt(dataObj[i].Cured),
+                active: parseInt(dataObj[i].ActiveCases)
+                });
+                
+            }
+            else
+            {
+                data.push({
+                name: (dataObj[i].State).toLowerCase(),
+                deaths: parseInt(dataObj[i].Deaths),
+                value: parseInt(dataObj[i].TotalCases),
+                cured: parseInt(dataObj[i].Cured),
+                active: parseInt(dataObj[i].ActiveCases)
+                });
+            }
+              tableStr += "<tr>";
+              tableStr += "<td style=\"color: rgb(248,249,251); background-color:#141414;\" align=\"center\">"+dataObj[i].State+"</td>";
+              tableStr += "<td style=\"color: #FFC101;\" align=\"center\">"+formatting(parseInt(dataObj[i].TotalCases))+"</td>";
+              tableStr += "<td style=\"color: #9673b9;\" align=\"center\">"+formatting(parseInt(dataObj[i].ActiveCases))+"</td>";
+              tableStr += "<td style=\"color: rgb(255,255,255);\" align=\"center\">"+formatting(parseInt(dataObj[i].Deaths))+"</td>";
+              tableStr += "<td style=\"color: #28a745;\" align=\"center\">"+formatting(parseInt(dataObj[i].Cured))+"</td>";
+              tableStr += "</tr>";                
+                
+        }
+        tableStr += "<tr><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>";
+        document.getElementById("tablecss").innerHTML=tableStr;
+
+
+
+
+            //data.push({name:'Andhra Pradesh'.toLowerCase(), value:67});
+
+        // Add lower case codes to the data set for inclusion in the tooltip.pointFormat
+        var mapData = Highcharts.geojson(Highcharts.maps['countries/in/custom/in-all-disputed']);
+        $.each(mapData, function () {
+            this.id = this.properties['hc-key']; // for Chart.get()
+            //this.flag = this.id.replace('UK', 'GB').toLowerCase();
+        });
+
+        // Wrap point.select to get to the total selected points
+        Highcharts.wrap(Highcharts.Point.prototype, 'select', function (proceed) {
+
+            proceed.apply(this, Array.prototype.slice.call(arguments, 1));
+
+            var points = mapChart.getSelectedPoints();
+            if (points.length) {
+                if (points.length === 1) {
+                    $('#info #flag').html('<img src=\'assets/img/india-flag.svg\' alt=\'IND\'>');
+                    $('#info h1').html((points[0].name).toUpperCase());
+                    $('#1').html("<span style=\"color:#a1a1a1; font-size:14px\"> AFFECTED </span> : <b><span style=\"color:#ffc101; font-size:18px;\">" +formatting(points[0].value)+ "</span></b>&nbsp;&nbsp;");
+                    $('#2').html("<span style=\"color:#a1a1a1; font-size:14px\"> ACTIVE CASES </span> : <b><span style=\"color:#9673b9; font-size:18px;\">" +formatting(points[0].active)+"</b>&nbsp;&nbsp;");
+                    $('#3').html("<span style=\"color:#a1a1a1; font-size:14px\"> DEATHS </span> : <b><span style=\"color:white; font-size:18px; \">" +formatting(points[0].deaths)+"</b>&nbsp;&nbsp;");
+                    $('#4').html("<span style=\"color:#a1a1a1; font-size:14px\"> CURED </span> : <b><span style=\"color:#28a745; font-size:18px;\">" +formatting(points[0].cured)+"</b>&nbsp;");
+                } 
+                else
+                {
+                    $('#info h1').html("SELECT A STATE ON THE MAP TO SEE ITS RELATIVE INFORMATION");
+                    $('#info #country-chart').html("");
+                }
+                
+            }
+            
+        });
+
+        // Initiate the map chart
+        mapChart = Highcharts.mapChart('visualization', {
+
+            chart:{
+                backgroundColor: "#141414"
+            },
+            title: {
+                style:{
+                    color:"#ffffff"
+                },
+                text: ''
+            },
+
+
+            mapNavigation: {
+                enabled: false,
+                enableDoubleClickZoomTo: false,
+                enableMouseWheelZoom: false,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
+            },
+
+            colorAxis: {
+                type: 'logarithmic',
+                minColor: '#07cff6',
+                maxColor: '#0d2534',
+                endOnTick: false,
+                startOnTick: false,
+                min: 1
+            },
+            
+            exporting: {
+                enabled: false, 
+                
+            }, 
+
+            tooltip: {
+                enabled: false,
+                footerFormat: '<span style="font-size: 10px">(CLICK FOR DETAILS)</span>'
+                //pointFormat: '{point.name}'
+            },
+
+            series: [{
+                /*
+                animation: {
+                duration: 1500
+            },*/
+                data: data,
+                mapData: mapData,
+                joinBy: ['hc-key', 'name'],
+                name: 'CONFIRMED CASES',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                borderColor: 'white',
+                borderWidth: 0.5,
+                states: {
+                    select: {
+                        color: '#7be495',
+                        borderColor: 'black',
+                        dashStyle: 'line'
+                    }
+                }
+            }]
+        });//initiate map chart
+        
+        
+        
+        
+});
+        // Pre-select a country
+        //mapChart.get('us').select();
+//    }//success
+
+    function getDayName()
+        {
+            var date=new Date();
+            var dayName=new Array(7);
+            dayName[0]="data/india/Sunday";
+            dayName[1]="data/india/Monday";
+            dayName[2]="data/india/Tuesday";
+            dayName[3]="data/india/Wednesday";
+            dayName[4]="data/india/Thursday";
+            dayName[5]="data/india/Friday";
+            dayName[6]="data/india/Saturday";
+            
+            var dayNumber=date.getDay()-2
+            
+            if(dayNumber<0)
+                return dayName[dayName.length+dayNumber];
+            else
+                return dayName[dayNumber];
+        }
+        var fileName=getDayName();
+        console.log(fileName);
+        
+        function formatStr(arg)
+      {
+        var n=arg.indexOf('*');
+        var index=arg.length;
+        if(n!=-1)
+          return arg.slice(0,n);
+        else
+          return arg.slice(0,index);
+      }
+
+        
+        $.getJSON(fileName+'.txt',function(dataObj)
+        {
+            var tableStr="<table class=\"table\"><thead><tr>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 55px; background-color: orange;\" ><center><strong>AFFECTED INDIAN STATE</strong></center></th>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 55px; background-color: orange;\" ><center><strong>PEOPLE AFFECTED</strong></center></th>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 55px; background-color: orange;\" ><center><strong>ACTIVE CASES</strong></center></th>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 55px; background-color: orange;\" ><center><strong>DEATH TOLL</strong></center></th>";
+          tableStr += "<th style=\"color: #141414; position: sticky; top: 55px; background-color: orange;\" ><center><strong>PEOPLE CURED</strong></center></th>"
+          tableStr += "</tr></thead><tbody>";
+          
+          for(var i=0;i<dataObj.length;i++)
+          {
+              
+            if((dataObj[i].State).includes('Total') || (dataObj[i].State).includes('Reassigned'))
+                continue;  
+            if(dataObj[i].State === "Total" || dataObj[i].State==='India')
+              continue;
+            else
+            {
+
+              tableStr += "<tr>";
+              tableStr += "<td style=\"color: rgb(248,249,251); background-color:#141414;\" align=\"center\">"+formatStr(dataObj[i].State)+"</td>";
+              tableStr += "<td style=\"color: #FFC101;\" align=\"center\">"+formatting(parseInt(formatStr(dataObj[i].TotalCases)))+"</td>";
+              tableStr += "<td style=\"color: #9673b9;\" align=\"center\">"+formatting(parseInt(formatStr(dataObj[i].ActiveCases)))+"</td>";
+              tableStr += "<td style=\"color: rgb(255,255,255);\" align=\"center\">"+formatting(parseInt(formatStr(dataObj[i].Deaths)))+"</td>";
+              tableStr += "<td style=\"color: #28a745;\" align=\"center\">"+formatting(parseInt(formatStr(dataObj[i].Cured)))+"</td>";
+              tableStr += "</tr>";
+            }
+          }//for
+          tableStr += "<tr><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>";
+          document.getElementsByClassName("tag2")[0].innerHTML=tableStr;
+        });
+		</script>
+	</body>
+</html>

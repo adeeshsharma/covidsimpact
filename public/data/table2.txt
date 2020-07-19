@@ -1,0 +1,1 @@
+[{"Col1":"Cases with Outcome"},{"Col1":"5,321,758"},{"Col1":"Recovered\/Discharged"},{"Col1":"4,850,718"},{"Col1":"Deaths"},{"Col1":"471,040"}]

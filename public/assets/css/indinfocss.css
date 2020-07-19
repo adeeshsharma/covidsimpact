@@ -1,0 +1,181 @@
+
+.navbar-toggler{
+    background-color: #222222;
+}
+.mapsize{
+    height: 30vh;
+    width: 100%;
+}
+
+
+
+#side-menu {
+        background-color: #222222;
+      }
+
+#CasesInfo{
+  font-size:25px;
+}
+
+#DeathsInfo{
+  font-size:25px;
+}
+
+#RecoveryInfo{
+  font-size:25px;
+}
+
+@media (min-width: 400px){
+    .mapsize{
+    height: 80vh;
+    width: 100%;
+}
+}
+
+.infoaize{
+    color: rgb(177,177,177); 
+    text-align: left;
+}
+
+
+#allInfo{font-weight: bold;
+  color: #A1A1A1;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+   text-align: left;
+}
+
+.infosize{
+ font-size: 4px;   
+}
+
+@media (max-width: 400px){
+    #tablecss th{
+        font-size: 8px;
+        
+    }
+    
+    #tablecss td {
+         border: none;
+    }   
+    
+   /* #tablecss table{
+        width: 90%;
+    }*/
+    
+
+}
+
+
+.button {
+ background-color: transparent;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button2 {
+  
+  color: black; 
+  border: 2px solid #881415;
+}
+
+.button2:hover {
+  background-color: #881415;
+  color: white;
+}
+
+.button3 {
+  
+  color: black; 
+  border: 2px solid orange;
+}
+
+.button3:hover {
+  background-color: orange;
+  color: white;
+}
+
+#footercss{
+    position: relative;
+    height: 9vh; 
+    background-color: #222222;
+    width: 100%;
+    color: white;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    padding-top: 22px;
+    
+    grid-auto-flow: row;
+}
+
+#myFooter {
+  padding-top: 32px;
+}
+
+#myFooter .footer-copyright {
+  margin-bottom: 35px;
+  text-align: center;
+  color: #777;
+}
+
+#myFooter ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+#myFooter a {
+  color: #282b2d;
+  font-size: 18px;
+}
+
+#myFooter li {
+  display: inline-block;
+  margin: 0px 15px;
+  line-height: 2;
+}
+
+#myFooter .fa {
+  font-size: 36px;
+  margin-right: 15px;
+  margin-left: 20px;
+  background-color: white;
+  color: #d0d0d0;
+  border-radius: 51%;
+  padding: 10px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  line-height: 43px;
+  text-decoration: none;
+  transition: color 0.2s;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+#myFooter {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
