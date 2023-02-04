@@ -10,4 +10,4 @@ Covids Impact is a Covid-19 Tracking website which is developed as a self-initia
 
 - This repo is currently using pre-generated .txt files which consists of the data that is being displayed on the frontend of the application.
 
-- This particular demo repository with static data is hosted on heroku and can be found here: https://covidsimpact.herokuapp.com/index.html
+- This particular demo repository with static data is hosted on render and can be found here: https://covidsimpact.onrender.com/
